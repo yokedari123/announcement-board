@@ -1,0 +1,138 @@
+/* ── Reset & Base ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Background ── */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
+  font-family: 'Lato', sans-serif;
+  padding: 20px;
+}
+
+/* ── Card ── */
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow:
+    0 10px 40px rgba(233, 30, 99, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.06);
+  animation: fadeInUp 0.5s ease both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Card Header ── */
+.card-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.icon {
+  font-size: 2.4rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  color: #ad1457;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 0.92rem;
+  color: #e57fa0;
+}
+
+/* ── Card Body ── */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── Input ── */
+input[type="text"] {
+  width: 100%;
+  padding: 13px 16px;
+  border: 2px solid #f8bbd0;
+  border-radius: 12px;
+  font-size: 0.97rem;
+  font-family: 'Lato', sans-serif;
+  color: #4a4a4a;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #fff9fb;
+}
+
+input[type="text"]::placeholder {
+  color: #e8a0b8;
+}
+
+input[type="text"]:focus {
+  border-color: #e91e63;
+  box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.12);
+}
+
+/* ── Button ── */
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #e91e63, #c2185b);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 14px rgba(233, 30, 99, 0.35);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.45);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(233, 30, 99, 0.3);
+}
+
+/* ── Output Box ── */
+.card-output {
+  margin-top: 24px;
+  min-height: 52px;
+  background: #fff0f5;
+  border-left: 4px solid #e91e63;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+}
+
+#outputBox {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ad1457;
+  word-break: break-word;
+  min-height: 24px;
+}
